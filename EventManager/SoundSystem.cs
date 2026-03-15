@@ -2,5 +2,8 @@
 
 class SoundSystem
 {
-    public void PrintSound(string name, string)
+    public void OnPrintSound(object sender, GameEventArgs e)
+    {
+        Console.WriteLine($"[Sound] 이벤트: {e.EventName}");
+    }
 }

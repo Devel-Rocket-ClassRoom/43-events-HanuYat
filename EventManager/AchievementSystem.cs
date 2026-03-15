@@ -2,8 +2,11 @@
 
 class AchievementSystem
 {
-    public void Achievement(string name, string achivement)
+    public void OnAchievement(object sender, GameEventArgs e)
     {
-        Console.WriteLine($"업적 달성: {achivement}점");
+        if (e.EventName == "Achievement")
+        {
+            Console.WriteLine($"업적 달성: {e.Data}");
+        }
     }
 }
